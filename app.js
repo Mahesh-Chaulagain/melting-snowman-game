@@ -105,8 +105,9 @@ function checkWinOrLose(){
     }
     else if (wrongGuesses >= maxWrongGuesses){
         const messageContainer = document.querySelector('.message');
-        messageContainer.innerText = `you lose, the wordd was "${wordToGuess}".`;
-        meltingSnowmanContainer.innerHTML = `<img src="images/gameover.png" alt="gameover">`;
+        messageContainer.innerText = `You lose, the word was "${wordToGuess}".`;
+        const meltingSnowmanContainer = document.querySelector('.melting-snowman');
+        meltingSnowmanContainer.innerHTML = `<img src="https://media.giphy.com/media/GD5zyZuqup1FWLF1yT/giphy.gif" alt="gameover">`;
         const letterButtons = document.querySelectorAll('.letters button');
         letterButtons.forEach(button => {
             button.disabled = true;
